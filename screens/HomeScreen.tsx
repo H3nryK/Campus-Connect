@@ -1,9 +1,17 @@
-// screens/HomeScreen.js
 import React from 'react';
-import {View, Text, StyleSheet, Image, Animated} from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  TouchableOpacity,
+  Animated,
+} from 'react-native';
 import {useEffect, useRef} from 'react';
+import {useNavigation} from '@react-navigation/native';
 
-const HomeScreen = ({navigation}) => {
+const HomeScreen = () => {
+  const navigation = useNavigation();
   const fadeAnim = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
@@ -21,10 +29,19 @@ const HomeScreen = ({navigation}) => {
       </Animated.View>
       <Animated.View style={{...styles.contentContainer, opacity: fadeAnim}}>
         <Text style={styles.logoText}>Campus Connect</Text>
-        <Text style={styles.title}>Welcome to Campus Connect</Text>
         <Text style={styles.subtitle}>
           Your gateway to all things happening in Machakos University
         </Text>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('Signup')}>
+          <Text style={styles.buttonText}>Sign Up</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('Login')}>
+          <Text style={styles.buttonText}>Login</Text>
+        </TouchableOpacity>
       </Animated.View>
     </View>
   );
@@ -38,24 +55,21 @@ const styles = StyleSheet.create({
     backgroundColor: '#f5f5f5',
   },
   logoContainer: {
+    alignItems: 'center',
     marginBottom: 20,
   },
   logo: {
-    width: 100,
-    height: 100,
+    width: 200,
+    height: 200,
   },
   logoText: {
-    fontFamily: 'Poppins-Bold',
     fontSize: 32,
+    fontWeight: 'bold',
     color: '#3498db',
+    marginBottom: 20,
   },
   contentContainer: {
     alignItems: 'center',
-  },
-  title: {
-    fontFamily: 'Poppins-Bold',
-    fontSize: 24,
-    color: '#333',
   },
   subtitle: {
     fontFamily: 'Poppins-Regular',
@@ -63,6 +77,21 @@ const styles = StyleSheet.create({
     color: '#777',
     textAlign: 'center',
     marginHorizontal: 20,
+    marginBottom: 40,
+  },
+  button: {
+    backgroundColor: '#3498db',
+    paddingVertical: 15,
+    paddingHorizontal: 30,
+    borderRadius: 25,
+    marginVertical: 10,
+    width: '100%',
+    alignItems: 'center',
+  },
+  buttonText: {
+    fontWeight: 'bold',
+    fontSize: 16,
+    color: '#fff',
   },
 });
 

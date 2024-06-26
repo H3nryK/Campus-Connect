@@ -10,10 +10,15 @@
     "test": "jest"
   },
   "dependencies": {
+    "@expo-google-fonts/poppins": "^0.2.3",
     "@react-navigation/native": "^6.1.17",
     "@react-navigation/native-stack": "^6.9.26",
+    "@react-navigation/stack": "^6.3.29",
+    "expo-app-loading": "^2.1.1",
+    "expo-font": "^12.0.7",
     "react": "18.2.0",
     "react-native": "0.74.2",
+    "react-native-gesture-handler": "^2.17.1",
     "react-native-maps": "^1.15.6",
     "react-native-reanimated": "^3.12.1",
     "react-native-safe-area-context": "^4.10.5",
@@ -32,6 +37,7 @@
     "babel-jest": "^29.6.3",
     "eslint": "^8.19.0",
     "jest": "^29.6.3",
+    "metro-react-native-babel-preset": "^0.77.0",
     "prettier": "2.8.8",
     "react-test-renderer": "18.2.0",
     "typescript": "5.0.4"
