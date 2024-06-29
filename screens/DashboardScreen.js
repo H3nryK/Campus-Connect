@@ -1,27 +1,107 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  ScrollView,
+} from 'react-native';
 
-const DashboardScreen = () => {
+const DashboardScreen = ({navigation}) => {
+  const sections = [
+    {title: 'Profile', icon: '👤'},
+    {title: 'School Departments', icon: '🏫'},
+    {title: 'Events', icon: '📅'},
+    {title: 'School Resources', icon: '📚'},
+    {title: 'Clubs & Societies', icon: '🤝'},
+  ];
+
+  const handleSectionPress = section => {
+    switch (section) {
+      case 'Profile':
+        navigation.navigate('ProfileScreen');
+        break;
+      case 'School Departments':
+        navigation.navigate('DepartmentsScreen');
+        break;
+      case 'Events':
+        navigation.navigate('EventsScreen');
+        break;
+      case 'School Resources':
+        navigation.navigate('ResourcesScreen');
+        break;
+      case 'Clubs & Societies':
+        navigation.navigate('ClubsScreen');
+        break;
+    }
+  };
+
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <Text style={styles.title}>Dashboard</Text>
-      <Text>Welcome to Campus Connect!</Text>
-      {/* Add more dashboard content here */}
-    </View>
+      <Text style={styles.welcome}>Welcome to Campus Connect!</Text>
+
+      <View style={styles.sectionsContainer}>
+        {sections.map((section, index) => (
+          <TouchableOpacity
+            key={index}
+            style={styles.sectionButton}
+            onPress={() => handleSectionPress(section.title)}>
+            <Text style={styles.sectionIcon}>{section.icon}</Text>
+            <Text style={styles.sectionTitle}>{section.title}</Text>
+          </TouchableOpacity>
+        ))}
+      </View>
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
     backgroundColor: '#f5f5f5',
+    padding: 20,
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
+    marginBottom: 10,
+    textAlign: 'center',
+  },
+  welcome: {
+    fontSize: 18,
     marginBottom: 20,
+    textAlign: 'center',
+  },
+  sectionsContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+  },
+  sectionButton: {
+    width: '48%',
+    backgroundColor: '#ffffff',
+    borderRadius: 10,
+    padding: 20,
+    marginBottom: 15,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.23,
+    shadowRadius: 2.62,
+    elevation: 4,
+  },
+  sectionIcon: {
+    fontSize: 30,
+    marginBottom: 10,
+  },
+  sectionTitle: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    textAlign: 'center',
   },
 });
 
