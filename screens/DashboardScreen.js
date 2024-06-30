@@ -19,19 +19,19 @@ const DashboardScreen = ({navigation}) => {
   const handleSectionPress = section => {
     switch (section) {
       case 'Profile':
-        navigation.navigate('ProfileScreen');
+        navigation.navigate('Profile');
         break;
       case 'School Departments':
-        navigation.navigate('DepartmentsScreen');
+        navigation.navigate('Departments');
         break;
       case 'Events':
-        navigation.navigate('EventsScreen');
+        navigation.navigate('Events');
         break;
       case 'School Resources':
-        navigation.navigate('ResourcesScreen');
+        navigation.navigate('Resources');
         break;
       case 'Clubs & Societies':
-        navigation.navigate('ClubsScreen');
+        navigation.navigate('Clubs');
         break;
     }
   };
