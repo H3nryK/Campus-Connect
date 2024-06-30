@@ -8,9 +8,6 @@ import {
   Image,
 } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import Party from '../assets/party.jpg';
-import Hackathon from '../assets/hack.jpg';
-import Movie from '../assets/movie.jpg';
 
 const DashboardScreen = ({navigation}) => {
   const [greeting, setGreeting] = useState('');
@@ -35,19 +32,19 @@ const DashboardScreen = ({navigation}) => {
       id: '1',
       title: 'Campus Movie Night',
       likes: 120,
-      image: Movie,
+      image: '../assets/movie.jpg',
     },
     {
       id: '2',
       title: 'Freshman Welcome Party',
       likes: 89,
-      image: Party,
+      image: '../assets/party.jpg',
     },
     {
       id: '3',
       title: 'Hackathon 2023',
       likes: 156,
-      image: Hackathon,
+      image: '../assets/hack.jpg',
     },
   ];
 
