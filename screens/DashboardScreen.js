@@ -8,6 +8,9 @@ import {
   Image,
 } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import Party from '../assets/party.jpg';
+import Hackathon from '../assets/hack.jpg';
+import Movie from '../assets/movie.jpg';
 
 const DashboardScreen = ({navigation}) => {
   const [greeting, setGreeting] = useState('');
@@ -32,19 +35,19 @@ const DashboardScreen = ({navigation}) => {
       id: '1',
       title: 'Campus Movie Night',
       likes: 120,
-      image: 'https://example.com/movie-night.jpg',
+      image: Movie,
     },
     {
       id: '2',
       title: 'Freshman Welcome Party',
       likes: 89,
-      image: 'https://example.com/welcome-party.jpg',
+      image: Party,
     },
     {
       id: '3',
       title: 'Hackathon 2023',
       likes: 156,
-      image: 'https://example.com/hackathon.jpg',
+      image: Hackathon,
     },
   ];
 
@@ -154,6 +157,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     marginBottom: 10,
+    color: '#333',
   },
   eventsContainer: {
     marginTop: 10,
@@ -173,6 +177,7 @@ const styles = StyleSheet.create({
   eventTitle: {
     fontSize: 16,
     fontWeight: 'bold',
+    color: '#333',
   },
   eventDate: {
     fontSize: 12,
@@ -191,6 +196,7 @@ const styles = StyleSheet.create({
   socialTitle: {
     fontSize: 14,
     fontWeight: 'bold',
+    color: '#333',
   },
   socialLikes: {
     fontSize: 12,
