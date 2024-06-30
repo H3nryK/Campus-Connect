@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 20,
+    color: '#333',
   },
   resourceItem: {
     flex: 1,
@@ -58,6 +59,7 @@ const styles = StyleSheet.create({
   resourceName: {
     fontSize: 16,
     textAlign: 'center',
+    color: '#333',
   },
 });
 

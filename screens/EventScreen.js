@@ -38,6 +38,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 20,
+    color: '#333',
   },
   eventItem: {
     backgroundColor: 'white',
@@ -48,6 +49,7 @@ const styles = StyleSheet.create({
   eventName: {
     fontSize: 18,
     fontWeight: 'bold',
+    color: '#333',
   },
   eventDate: {
     fontSize: 16,

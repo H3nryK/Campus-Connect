@@ -38,6 +38,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 20,
+    color: '#333',
   },
   clubItem: {
     backgroundColor: 'white',
@@ -47,6 +48,7 @@ const styles = StyleSheet.create({
   },
   clubName: {
     fontSize: 18,
+    color: '#333',
   },
 });
 

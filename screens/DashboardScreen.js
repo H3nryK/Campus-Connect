@@ -67,11 +67,13 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 10,
     textAlign: 'center',
+    color: '#333',
   },
   welcome: {
     fontSize: 18,
     marginBottom: 20,
     textAlign: 'center',
+    color: '#333',
   },
   sectionsContainer: {
     flexDirection: 'row',
@@ -102,6 +104,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     textAlign: 'center',
+    color: '#333',
   },
 });
 
