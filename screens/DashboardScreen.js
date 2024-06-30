@@ -70,17 +70,6 @@ const DashboardScreen = ({navigation}) => {
 
   return (
     <ScrollView style={styles.container}>
-      <View style={styles.header}>
-        <TouchableOpacity onPress={() => navigation.openDrawer()}>
-          <Ionicons name="menu" size={24} color="#007AFF" />
-        </TouchableOpacity>
-        <Text style={styles.greeting}>
-          {greeting}, {username}!
-        </Text>
-        <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
-          <Ionicons name="person-circle-outline" size={24} color="#007AFF" />
-        </TouchableOpacity>
-      </View>
 
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Upcoming Events</Text>
