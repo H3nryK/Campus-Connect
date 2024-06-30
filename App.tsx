@@ -27,7 +27,7 @@ const MainTabs = () => (
       // eslint-disable-next-line react/no-unstable-nested-components
       tabBarIcon: ({focused, color, size}) => {
         let iconName;
-        if (route.name === 'Home') {
+        if (route.name === 'Dashboard') {
           iconName = focused ? 'home' : 'home-outline';
         } else if (route.name === 'Profile') {
           iconName = focused ? 'person' : 'person-outline';
