@@ -16,7 +16,7 @@ const SignUpScreen = ({navigation}) => {
     // Implement sign up logic here
     console.log('Sign up:', {username, email, password});
     // Navigate to Dashboard after successful sign up
-    navigation.navigate('Dashboard');
+    navigation.navigate('MainApp');
   };
 
   return (

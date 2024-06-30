@@ -15,7 +15,7 @@ const LoginScreen = ({navigation}) => {
     // Implement login logic here
     console.log('Login:', {email, password});
     // Navigate to Dashboard after successful login
-    navigation.navigate('Dashboard');
+    navigation.navigate('MainApp');
   };
 
   return (
