@@ -1,5 +1,6 @@
 import React from 'react';
 import 'react-native-gesture-handler';
+import 'react-native-reanimated';
 import {NavigationContainer} from '@react-navigation/native';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
