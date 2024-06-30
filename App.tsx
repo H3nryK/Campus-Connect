@@ -24,6 +24,7 @@ const Stack = createStackNavigator();
 const MainTabs = () => (
   <Tab.Navigator
     screenOptions={({route}) => ({
+      // eslint-disable-next-line react/no-unstable-nested-components
       tabBarIcon: ({focused, color, size}) => {
         let iconName;
         if (route.name === 'Home') {
